@@ -1,0 +1,54 @@
+{
+  "name": "Maciej Bociek",
+  "email": "Maciej.Bociek@dazn.com",
+  "endpoint": "https://default-30459df5-1e53-4d8b-a162-0ad2348546f1.17.common.europe.azure-apihub.net/invoke",
+  "token": "Bearer token",
+  "days": [
+    { "date": "26-Jan-26", "payload": "kayo" },
+    { "date": "27-Jan-26", "payload": "kayo" },
+    { "date": "28-Jan-26", "payload": "onLeave" },
+    { "date": "29-Jan-26", "payload": "onLeave" },
+    { "date": "30-Jan-26", "payload": "kayo" },
+    { "date": "02-Feb-26", "payload": "kayo" },
+    { "date": "03-Feb-26", "payload": "kayo" },
+    { "date": "04-Feb-26", "payload": "kayo" },
+    { "date": "05-Feb-26", "payload": "onLeave" },
+    { "date": "06-Feb-26", "payload": "onLeave" }
+  ],
+  "payloadTemplates": {
+    "kayo": {
+      "field_4": "Foxtel Migration",
+      "field_7": "07:30",
+      "T1_x002d_ProjectSearch": "Any other Project",
+      "T2Category": "Meetings",
+      "T2Hours": "00:30",
+      "WorkStatus": "Working",
+      "TotalEfforts": "08:00"
+    },
+    "meetings": {
+      "field_4": "Foxtel Migration",
+      "field_7": "05:30",
+      "T1_x002d_ProjectSearch": "Any other Project",
+      "T2Category": "Meetings",
+      "T2Hours": "02:30",
+      "WorkStatus": "Working",
+      "TotalEfforts": "08:00"
+    },
+    "onLeave": {
+      "field_5": "",
+      "field_7": "00:00",
+      "T2Hours": "00:00",
+      "WorkStatus": "OnLeave",
+      "TotalEfforts": "00:00"
+    },
+    "bau": {
+      "field_4": "BAU",
+      "field_7": "07:30",
+      "T1_x002d_ProjectSearch": "BAU",
+      "T2Category": "Meetings",
+      "T2Hours": "00:30",
+      "WorkStatus": "Working",
+      "TotalEfforts": "08:00"
+    }
+  }
+}

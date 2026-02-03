@@ -1,0 +1,12 @@
+{
+  "name": "effort-tool",
+  "description": "effortTool.js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "node effortTool.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
