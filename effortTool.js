@@ -27,7 +27,7 @@ function getBaseFields(dateStr) {
         T2Hours: '',
         T2Comments: '',
         T3ProjectName: '',
-        T3hours: '00:00',
+        T3Hours: '00:00',
         T3Comments: '',
         T4ProjectName: '',
         T4Hours: '00:00',
