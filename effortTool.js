@@ -105,9 +105,9 @@ async function run() {
         const { date, payload } = day;
         const builtPayload = buildPayload(date, payload);
         const data = JSON.stringify(builtPayload);
-        // console.log(`Sending ${payload} for date: ${date}.`);
-        console.log(builtPayload)
-        // await sendRequest(data);
+        console.log(`Sending ${payload} for date: ${date}.`);
+
+        await sendRequest(data);
     }
 }
 
