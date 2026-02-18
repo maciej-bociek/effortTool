@@ -15,38 +15,38 @@ function formatDate(date = new Date()) {
 // Base repetitive fields
 function getBaseFields(dateStr) {
     return {
-        field_1: config.name,
-        field_2: config.email,
+        field_1: '',
         field_3: dateStr,
-        field_8: formatDate(),
+        field_4: '',
+        field_6: '',
+        field_7: '',
         T1Comments: '',
-        T2DEPID: '',
+        T1_x002d_ProjectSearch: '',
+        T2Category: '',
         T2ProjectName: '',
+        T2Hours: '',
         T2Comments: '',
-        T3DEPID: '',
         T3ProjectName: '',
         T3hours: '00:00',
         T3Comments: '',
-        T4DEPID: '',
         T4ProjectName: '',
         T4Hours: '00:00',
         T4Comments: '',
-        T5DEPID: '',
         T5ProjectName: '',
         T5Hours: '00:00',
         T5Comments: '',
-        T6DEPID: '',
         T6ProjectName: '',
         T6Hours: '00:00',
         T6Comments: '',
-        T7DEPID: '',
         T7ProjectName: '',
         T7Hours: '00:00',
         T7Comments: '',
-        T8DEPID: '',
         T8ProjectName: '',
         T8Hours: '00:00',
         T8Comments: '',
+        field_8: formatDate(),
+        WorkStatus: '',
+        TotalEfforts: '',
     };
 }
 
@@ -105,9 +105,12 @@ async function run() {
         const { date, payload } = day;
         const builtPayload = buildPayload(date, payload);
         const data = JSON.stringify(builtPayload);
-        console.log(`Sending ${payload} for date: ${date}.`);
-        await sendRequest(data);
+        // console.log(`Sending ${payload} for date: ${date}.`);
+        console.log(builtPayload)
+        // await sendRequest(data);
     }
 }
 
 run();
+
+
