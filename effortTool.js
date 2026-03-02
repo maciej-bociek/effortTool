@@ -15,7 +15,8 @@ function formatDate(date = new Date()) {
 // Base repetitive fields
 function getBaseFields(dateStr) {
     return {
-        field_1: '',
+        field_1: config.user.name,
+        field_2: config.user.email,
         field_3: dateStr,
         field_4: '',
         field_6: '',
@@ -27,7 +28,7 @@ function getBaseFields(dateStr) {
         T2Hours: '',
         T2Comments: '',
         T3ProjectName: '',
-        T3Hours: '00:00',
+        T3hours: '00:00',
         T3Comments: '',
         T4ProjectName: '',
         T4Hours: '00:00',
@@ -105,6 +106,7 @@ async function run() {
         const { date, payload } = day;
         const builtPayload = buildPayload(date, payload);
         const data = JSON.stringify(builtPayload);
+        // console.log('Built payload:', data);
         console.log(`Sending ${payload} for date: ${date}.`);
 
         await sendRequest(data);
@@ -112,5 +114,7 @@ async function run() {
 }
 
 run();
+
+
 
 
