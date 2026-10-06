@@ -1,17 +1,36 @@
 {
-  "endpoint": "https://default-30459df5-1e53-4d8b-a162-0ad2348546f1.17.common.europe.azure-apihub.net/invoke",
-  "token": "Bearer token",
+  "endpoint": "https://default30459df51e534d8ba1620ad2348546.f1.environment.api.powerplatform.com/connectors/runtime/invoke/scalegroups/europe/shards/17/apis/sharepointonline/connections/82103605c16148c1a2e7f83b9e8bc687/datasets/https%253A%252F%252Fdazngroup.sharepoint.com%252Fsites%252FTimesheetsTracker/tables/fe668198-afc4-4269-9a28-ae1d2ba32593/items",
+  "token": "",
   "user": {
     "name": "Maciej Bociek",
     "email": "Maciej.Bociek@dazn.com"
   },
   "days": [
-    { "date": "24-Feb-26", "payload": "bau" },
-    { "date": "25-Feb-26", "payload": "bau" },
-    { "date": "26-Feb-26", "payload": "bau" },
-    { "date": "27-Feb-26", "payload": "bau" }
-
-  ],
+  {
+    "date": "23-Sep-26",
+    "payload": "bau"
+  },
+  {
+    "date": "24-Sep-26",
+    "payload": "bau"
+  },
+  {
+    "date": "25-Sep-26",
+    "payload": "bau"
+  },
+  {
+    "date": "28-Sep-26",
+    "payload": "bau"
+  },
+  {
+    "date": "29-Sep-26",
+    "payload": "bau"
+  },
+  {
+    "date": "30-Sep-26",
+    "payload": "bau"
+  }
+],
   "payloadTemplates": {
     "kayo": {
       "field_4": "Foxtel Migration",
