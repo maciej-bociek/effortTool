@@ -1,36 +1,29 @@
 {
-  "endpoint": "https://default30459df51e534d8ba1620ad2348546.f1.environment.api.powerplatform.com/connectors/runtime/invoke/scalegroups/europe/shards/17/apis/sharepointonline/connections/82103605c16148c1a2e7f83b9e8bc687/datasets/https%253A%252F%252Fdazngroup.sharepoint.com%252Fsites%252FTimesheetsTracker/tables/fe668198-afc4-4269-9a28-ae1d2ba32593/items",
-  "token": "",
+  "token": "token",
+  "days": [
+  {
+    "date": "15-Oct-26",
+    "payload": "bau"
+  },
+  {
+    "date": "16-Oct-26",
+    "payload": "bau"
+  },
+  {
+    "date": "19-Oct-26",
+    "payload": "bau"
+  },
+  {
+    "date": "20-Oct-26",
+    "payload": "bau"
+  }
+],
   "user": {
     "name": "Maciej Bociek",
     "email": "Maciej.Bociek@dazn.com"
   },
-  "days": [
-  {
-    "date": "23-Sep-26",
-    "payload": "bau"
-  },
-  {
-    "date": "24-Sep-26",
-    "payload": "bau"
-  },
-  {
-    "date": "25-Sep-26",
-    "payload": "bau"
-  },
-  {
-    "date": "28-Sep-26",
-    "payload": "bau"
-  },
-  {
-    "date": "29-Sep-26",
-    "payload": "bau"
-  },
-  {
-    "date": "30-Sep-26",
-    "payload": "bau"
-  }
-],
+  "endpoint": "https://default30459df51e534d8ba1620ad2348546.f1.environment.api.powerplatform.com/connectors/runtime/invoke/scalegroups/europe/shards/17/apis/sharepointonline/connections/82103605c16148c1a2e7f83b9e8bc687/datasets/https%253A%252F%252Fdazngroup.sharepoint.com%252Fsites%252FTimesheetsTracker/tables/fe668198-afc4-4269-9a28-ae1d2ba32593/items",
+  "projectsEndpoint": "https://default30459df51e534d8ba1620ad2348546.f1.environment.api.powerplatform.com/connectors/runtime/invoke/scalegroups/europe/shards/17/apis/excelonlinebusiness/connections/9ddc5a58fe3b4a3380bf311ff1f37e06/v2/datasets/sites%25252Fperformgroup.sharepoint.com%25252Cf2682654-c885-4f00-a125-cbd2a360c878%25252C6b01a933-8ab2-4bea-96bc-1ac8dc6a29f0,b%252521VCZo8oXIAE-hJcvSo2DIeDOpAWuyiupLlrwayNxqKfDipXMSRW6GQrSB-B1PhBRM,01G2FL657MFTDMMNRBZVAITBFK6XYQL7ZJ/tables/%257BCDB934C0-2D26-4365-A4EE-A7EA2E6AD12A%257D/items?%24filter=SVP+eq+%27James+Pearce%27&pkColumn=__PowerAppsId__&isGeneratedColumn=true&%24top=2000",
   "payloadTemplates": {
     "kayo": {
       "field_4": "Foxtel Migration",
@@ -53,7 +46,7 @@
       "field_6": "",
       "field_7": "07:30",
       "T1Comments": "",
-      "T1_x002d_ProjectSearch": "BAU",
+      "T1_x002d_ProjectSearch": "BAU - Broadcast Engineering BAU",
       "T2Category": "Meetings",
       "T2Hours": "00:30",
       "T2Comments": "BAU",
