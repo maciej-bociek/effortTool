@@ -170,7 +170,7 @@ async function run() {
         const { date, payload } = day;
         const builtPayload = buildPayload(date, payload);
         console.log(`Sending ${payload} for date: ${date}...`);
-        // await sendRequest(builtPayload);
+        await sendRequest(builtPayload);
     }
 }
 
