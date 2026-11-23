@@ -2,7 +2,8 @@
 
 const fs = require('fs');
 
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+const payload = JSON.parse(fs.readFileSync('payload.json', 'utf8'));
+const user = JSON.parse(fs.readFileSync('user.json', 'utf8'));
 
 function formatDate(date = new Date()) {
     const day = String(date.getDate()).padStart(2, '0');
@@ -14,8 +15,8 @@ function formatDate(date = new Date()) {
 
 function getBaseFields(dateStr) {
     return {
-        field_1: config.user.name,
-        field_2: config.user.email,
+        field_1: user.user.name,
+        field_2: user.user.email,
         field_3: dateStr,
         field_4: '',
         field_6: '',
@@ -51,13 +52,13 @@ function getBaseFields(dateStr) {
 }
 
 function buildPayload(dateStr, type) {
-    const template = config.payloadTemplates[type];
+    const template = payload.payloadTemplates[type];
     if (!template) throw new Error(`Unknown payload type: ${type}`);
     return { ...getBaseFields(dateStr), ...template };
 }
 
 function getAuthHeader() {
-    return config.token.startsWith('Bearer ') ? config.token : `Bearer ${config.token}`;
+    return user.token.startsWith('Bearer ') ? user.token : `Bearer ${user.token}`;
 }
 
 // Source data contains non-breaking spaces (\u00A0) and inconsistent spacing.
@@ -66,7 +67,7 @@ function normalizeName(name) {
 }
 
 async function fetchAvailableProjects() {
-    if (!config.projectsEndpoint) throw new Error('Missing "projectsEndpoint" in config.json');
+    if (!user.projectsEndpoint) throw new Error('Missing "projectsEndpoint" in user.json');
 
     const headers = {
         'accept': 'application/json',
@@ -85,7 +86,7 @@ async function fetchAvailableProjects() {
     };
 
     const projects = new Set();
-    let url = config.projectsEndpoint;
+    let url = user.projectsEndpoint;
     while (url) {
         const response = await fetch(url, { method: 'GET', headers });
         if (!response.ok) {
@@ -102,9 +103,9 @@ async function fetchAvailableProjects() {
 }
 
 async function validateTemplates() {
-    const usedTypes = [...new Set(config.days.map((day) => day.payload))];
+    const usedTypes = [...new Set(payload.days.map((day) => day.payload))];
     const toCheck = usedTypes
-        .map((type) => ({ type, project: (config.payloadTemplates[type] || {}).T1_x002d_ProjectSearch }))
+        .map((type) => ({ type, project: (payload.payloadTemplates[type] || {}).T1_x002d_ProjectSearch }))
         .filter(({ project }) => project);
 
     if (toCheck.length === 0) return;
@@ -154,7 +155,7 @@ async function sendRequest(data) {
     };
 
     try {
-        const response = await fetch(config.endpoint, options);
+        const response = await fetch(user.endpoint, options);
         console.log(`Status: ${response.status}`);
         const body = await response.text();
         console.log('Response:', body);
@@ -166,7 +167,7 @@ async function sendRequest(data) {
 async function run() {
     await validateTemplates();
 
-    for (const day of config.days) {
+    for (const day of payload.days) {
         const { date, payload } = day;
         const builtPayload = buildPayload(date, payload);
         console.log(`Sending ${payload} for date: ${date}...`);

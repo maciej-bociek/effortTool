@@ -1,0 +1,39 @@
+{
+  "days": [
+    {
+      "date": "23-Oct-26",
+      "payload": "bau"
+    }
+  ],
+  "payloadTemplates": {
+    "kayo": {
+      "field_4": "Foxtel Migration",
+      "field_7": "07:30",
+      "T1_x002d_ProjectSearch": "Any other Project",
+      "T2Category": "Meetings",
+      "T2Hours": "00:30",
+      "WorkStatus": "Working",
+      "TotalEfforts": "08:00"
+    },
+    "onLeave": {
+      "field_5": "",
+      "field_7": "00:00",
+      "T2Hours": "00:00",
+      "WorkStatus": "OnLeave",
+      "TotalEfforts": "00:00"
+    },
+    "bau": {
+      "field_4": "BAU",
+      "field_6": "",
+      "field_7": "07:30",
+      "T1Comments": "",
+      "T1_x002d_ProjectSearch": "BAU - Broadcast Engineering BAU",
+      "T2Category": "Meetings",
+      "T2Hours": "00:30",
+      "T2Comments": "BAU",
+      "WorkStatus": "Working",
+      "TotalEfforts": "08:00"
+    }
+  }
+  
+}
