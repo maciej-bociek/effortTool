@@ -1,10 +1,4 @@
 {
-  "days": [
-    {
-      "date": "23-Oct-26",
-      "payload": "bau"
-    }
-  ],
   "payloadTemplates": {
     "kayo": {
       "field_4": "Foxtel Migration",

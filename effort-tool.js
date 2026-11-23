@@ -103,7 +103,7 @@ async function fetchAvailableProjects() {
 }
 
 async function validateTemplates() {
-    const usedTypes = [...new Set(payload.days.map((day) => day.payload))];
+    const usedTypes = [...new Set(user.days.map((day) => day.payload))];
     const toCheck = usedTypes
         .map((type) => ({ type, project: (payload.payloadTemplates[type] || {}).T1_x002d_ProjectSearch }))
         .filter(({ project }) => project);
@@ -167,10 +167,10 @@ async function sendRequest(data) {
 async function run() {
     await validateTemplates();
 
-    for (const day of payload.days) {
-        const { date, payload } = day;
-        const builtPayload = buildPayload(date, payload);
-        console.log(`Sending ${payload} for date: ${date}...`);
+    for (const day of user.days) {
+        const { date, payload: template } = day;
+        const builtPayload = buildPayload(date, template);
+        console.log(`Sending ${template} for date: ${date}...`);
         await sendRequest(builtPayload);
     }
 }
